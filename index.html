@@ -136,6 +136,19 @@
 
   <!-- Botpress widget -->
   <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2025/12/11/17/20251211173814-36O6MQRV.js" defer></script>
+  <script src="https://files.bpcontent.cloud/2025/12/11/17/20251211173814-36O6MQRV.js"></script>
+  <script>
+    window.addEventListener("load", function () {
+      if (window.botpress) {
+        window.botpress.on("ready", function () {
+          window.botpress.open();
+        });
+        window.botpress.init({
+          composerPlaceholder: "Escribe tu pregunta...",
+          botName: "Asistente Aelika",
+        });
+      }
+    });
+  </script>
 </body>
 </html>
