@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aelika · Demo</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #F0F4F8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid #D5DEE8;
+      box-shadow: 0 4px 24px rgba(13,27,42,0.08);
+      max-width: 480px;
+      width: 100%;
+      padding: 2rem 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: #0A8A7C;
+      border-radius: 50%;
+      margin-bottom: 1.25rem;
+    }
+    .logo svg { width: 28px; height: 28px; fill: #fff; }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #0D1B2A;
+      margin-bottom: 0.4rem;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: #4B5E73;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #E8EDF3;
+      margin: 1.25rem 0;
+    }
+
+    .hint-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #8B9CB5;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .hints {
+      list-style: none;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hints li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 13px;
+      color: #4B5E73;
+      line-height: 1.45;
+    }
+
+    .hints li::before {
+      content: "";
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #0A8A7C;
+      margin-top: 5px;
+    }
+
+    .footer {
+      font-size: 11px;
+      color: #8B9CB5;
+      margin-top: 0.5rem;
+    }
+
+    .footer a { color: #0A8A7C; text-decoration: none; }
+
+    /* Botpress widget override — push it into view */
+    #bp-web-widget { z-index: 9999 !important; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7H4a7 7 0 0 1 7-7h1V5.73A2 2 0 0 1 10 4a2 2 0 0 1 2-2M7.5 13a.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5m9 0a.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5M4 15h16v1a7 7 0 0 1-7 7H11a7 7 0 0 1-7-7v-1Z"/>
+      </svg>
+    </div>
+
+    <h1>Asistente Aelika</h1>
+    <p class="subtitle">Automatización del proceso comercial para Inevita.<br>Haz clic en el ícono de chat para comenzar.</p>
+
+    <hr class="divider" />
+
+    <p class="hint-label">Puedes preguntarle sobre</p>
+    <ul class="hints">
+      <li>¿Cómo funciona la asignación automática de leads?</li>
+      <li>¿Qué pasa si un asesor no contesta en 30 minutos?</li>
+      <li>¿Cómo llegan las notificaciones por WhatsApp?</li>
+      <li>¿Qué incluye el reporte semanal de desempeño?</li>
+    </ul>
+
+    <p class="footer">Desarrollado por <a href="https://aelika.io" target="_blank">Aelika</a></p>
+  </div>
+
+  <!-- Botpress widget -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/12/11/17/20251211173814-36O6MQRV.js" defer></script>
+</body>
+</html>
